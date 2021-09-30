@@ -1,0 +1,7 @@
+{
+  "name": "stripe-credit-cards",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
