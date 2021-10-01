@@ -3,8 +3,8 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
-    path: '',
-    loadChildren: () => import('./tabs/tabs.module').then(m => m.TabsPageModule)
+    path: 'list-credit-cards',
+    loadChildren: () => import('./list-credit-cards/list-credit-cards.module').then( m => m.ListCreditCardsPageModule)
   }
 ];
 @NgModule({
