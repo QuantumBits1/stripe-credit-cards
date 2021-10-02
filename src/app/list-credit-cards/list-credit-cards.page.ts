@@ -29,10 +29,12 @@ export class ListCreditCardsPage implements OnInit {
       })
   }
 
-  public toDetail() {
+  public toDetail(creditCard) {
+    console.log("item clicked is: " + creditCard);
+    
     let navigationExtras: NavigationExtras = {
       state: {
-        creditCards: this.creditCards
+        creditCard: creditCard
       }
     }
     this.router.navigate(['/credit-card-detail'], navigationExtras);

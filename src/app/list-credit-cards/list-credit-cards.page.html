@@ -7,7 +7,7 @@
 <ion-content>
 <!-- List of Text Items -->
 <ion-list>
-  <ion-item  *ngFor="let i of creditCards" button (click)="toDetail()">
+  <ion-item  *ngFor="let i of creditCards" button (click)="toDetail(i)">
     <ion-label>**** **** **** {{ i.last4 }}</ion-label>
   </ion-item>
 </ion-list>

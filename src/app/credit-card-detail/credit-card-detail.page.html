@@ -8,5 +8,86 @@
 </ion-header>
 
 <ion-content>
-  This is details
+  <ion-grid *ngIf="creditCard">
+    <ion-row>
+      <ion-col size="1">
+        id
+      </ion-col>
+      <ion-col>
+        {{ creditCard.id }}
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        brand
+      </ion-col>
+      <ion-col>
+        {{ creditCard.brand }}
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        country
+      </ion-col>
+      <ion-col>
+        {{ creditCard.country }}
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        exp_month
+      </ion-col>
+      <ion-col>
+        {{ creditCard.exp_month }}
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        exp_month
+      </ion-col>
+      <ion-col>
+        {{ creditCard.exp_year }}
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        exp_year
+      </ion-col>
+      <ion-col>
+        {{ creditCard.address_line1 }}
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        exp_month
+      </ion-col>
+      <ion-col>
+        {{ creditCard.address_line2 }}
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        exp_month
+      </ion-col>
+      <ion-col>
+        {{ creditCard.city }}
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        exp_month
+      </ion-col>
+      <ion-col>
+        {{ creditCard.state }}
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        exp_month
+      </ion-col>
+      <ion-col>
+        {{ creditCard.country }}
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>
