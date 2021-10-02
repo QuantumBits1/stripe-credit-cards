@@ -1,5 +1,5 @@
 <ion-header>
-  <ion-toolbar>
+  <ion-toolbar color="success">
     <ion-title>list-credit-cards</ion-title>
   </ion-toolbar>
 </ion-header>
@@ -7,14 +7,9 @@
 <ion-content>
 <!-- List of Text Items -->
 <ion-list>
-  <ion-item>
-    <ion-label>**** **** **** 4444</ion-label>
-  </ion-item>
-  <ion-item>
-    <ion-label>**** **** **** 4242</ion-label>
-  </ion-item>
-  <ion-item>
-    <ion-label>**** **** **** 4444</ion-label>
+  <ion-item  *ngFor="let i of creditCards" button (click)="toDetail()">
+    <ion-label>**** **** **** {{ i.last4 }}</ion-label>
   </ion-item>
 </ion-list>
 </ion-content>
+git 
