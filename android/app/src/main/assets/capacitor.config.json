@@ -1,0 +1,6 @@
+{
+	"appId": "io.ionic.starter",
+	"appName": "stripe-credit-cards",
+	"webDir": "www",
+	"bundledWebRuntime": false
+}

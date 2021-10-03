@@ -1,5 +1,5 @@
 <ion-header>
-  <ion-toolbar>
+  <ion-toolbar color="primary">
     <ion-title>Credit Card Detail</ion-title>
     <ion-buttons slot="start">
       <ion-back-button defaultHref="/"></ion-back-button>
@@ -9,14 +9,6 @@
 
 <ion-content>
   <ion-grid *ngIf="creditCard">
-    <ion-row>
-      <ion-col>
-        ID
-      </ion-col>
-      <ion-col size="7">
-        {{ creditCard.id }}
-      </ion-col>
-    </ion-row>
     <ion-row>
       <ion-col>
         Brand

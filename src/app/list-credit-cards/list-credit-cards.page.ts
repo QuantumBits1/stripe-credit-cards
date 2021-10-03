@@ -10,6 +10,7 @@ import { Router, NavigationExtras } from '@angular/router';
 })
 export class ListCreditCardsPage implements OnInit {
   creditCards = [];
+
   constructor(private creditCardService: CreditCardService,
     private router: Router) { }
 
@@ -18,20 +19,16 @@ export class ListCreditCardsPage implements OnInit {
   }
 
   public getAllCreditCards() {
-    this.creditCardService.getAllCreditCards()
-      .subscribe((res: any) => {
+    this.creditCardService.getAllCreditCards().subscribe((res: any) => {
         if (!res)
           throw new Error("Get all credit cards failed");
         
         console.log(res);
-        this.creditCards = res.data;
-        
-      })
+        this.creditCards = res;
+    });
   }
 
-  public toDetail(creditCard) {
-    console.log("item clicked is: " + creditCard);
-    
+  public toDetail(creditCard: any) {
     let navigationExtras: NavigationExtras = {
       state: {
         creditCard: creditCard

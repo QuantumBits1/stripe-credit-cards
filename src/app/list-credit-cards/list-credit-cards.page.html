@@ -1,14 +1,15 @@
 <ion-header>
-  <ion-toolbar color="success">
+  <ion-toolbar color="primary">
     <ion-title>Credit Cards</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-<!-- List of Text Items -->
 <ion-list>
   <ion-item *ngFor="let i of creditCards" button (click)="toDetail(i)">
-    <ion-label>**** **** **** {{ i.last4 }}</ion-label>
+    <ion-label position="stacked"><h1>**** **** **** {{ i.last4 }}</h1></ion-label>
+    <ion-label position="stacked">{{ i.brand }}</ion-label>
+    <ion-label position="stacked" slot="end"><h3>Expiry Date {{ i.exp_month }}/{{i.exp_year}}</h3></ion-label>
   </ion-item>
 </ion-list>
-</ion-content>
+</ion-content>  
