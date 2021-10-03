@@ -1,6 +1,6 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>credit-card-detail</ion-title>
+    <ion-title>Credit Card Detail</ion-title>
     <ion-buttons slot="start">
       <ion-back-button defaultHref="/"></ion-back-button>
     </ion-buttons>
@@ -10,84 +10,89 @@
 <ion-content>
   <ion-grid *ngIf="creditCard">
     <ion-row>
-      <ion-col size="1">
-        id
-      </ion-col>
       <ion-col>
+        ID
+      </ion-col>
+      <ion-col size="7">
         {{ creditCard.id }}
       </ion-col>
     </ion-row>
     <ion-row>
       <ion-col>
-        brand
+        Brand
       </ion-col>
-      <ion-col>
+      <ion-col  size="7">
         {{ creditCard.brand }}
       </ion-col>
     </ion-row>
     <ion-row>
       <ion-col>
-        country
+        Country
       </ion-col>
-      <ion-col>
+      <ion-col size="7">
         {{ creditCard.country }}
       </ion-col>
     </ion-row>
     <ion-row>
       <ion-col>
-        exp_month
+        Expiry Month
       </ion-col>
-      <ion-col>
+      <ion-col size="7">
         {{ creditCard.exp_month }}
       </ion-col>
     </ion-row>
     <ion-row>
       <ion-col>
-        exp_month
+        Expiry Year
       </ion-col>
-      <ion-col>
+      <ion-col size="7">
         {{ creditCard.exp_year }}
       </ion-col>
     </ion-row>
     <ion-row>
       <ion-col>
-        exp_year
+        Address Line 1
       </ion-col>
-      <ion-col>
+      <ion-col size="7" *ngIf="creditCard.address_line1; else noRecord">
         {{ creditCard.address_line1 }}
       </ion-col>
     </ion-row>
     <ion-row>
       <ion-col>
-        exp_month
+        Address Line 2
       </ion-col>
-      <ion-col>
+      <ion-col size="7" *ngIf="creditCard.address_line2; else noRecord">
         {{ creditCard.address_line2 }}
       </ion-col>
     </ion-row>
     <ion-row>
       <ion-col>
-        exp_month
+        City
       </ion-col>
-      <ion-col>
+      <ion-col size="7" *ngIf="creditCard.city; else noRecord">
         {{ creditCard.city }}
       </ion-col>
     </ion-row>
     <ion-row>
       <ion-col>
-        exp_month
+        State
       </ion-col>
-      <ion-col>
+      <ion-col size="7" *ngIf="creditCard.state; else noRecord">
         {{ creditCard.state }}
       </ion-col>
     </ion-row>
     <ion-row>
       <ion-col>
-        exp_month
+        Country
       </ion-col>
-      <ion-col>
+      <ion-col size="7" *ngIf="creditCard.country; else noRecord">
         {{ creditCard.country }}
       </ion-col>
     </ion-row>
+    <ng-template #noRecord>
+      <ion-col size="7">
+        No Record
+      </ion-col>
+    </ng-template>
   </ion-grid>
 </ion-content>
